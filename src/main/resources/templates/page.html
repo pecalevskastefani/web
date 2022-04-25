@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div xmlns:th="http://www.thymeleaf.org">
+    <div th:each="b : ${books}" th:text="${b.getName() + ' ' + b.getCategory() + ' ' + b.getAuthor().getName() + ' ' + b.getAvailableCopies()}">
+    </div>
+    <div th:each="a : ${authors}" th:text="${a.getName() + ',' + a.getSurname() + ',' + a.getCountry()}">
+    </div>
+    <div th:each="c : ${countries}" th:text="${c.getName() + ' ' + c.getContinent()}">
+    </div>
+</div>
+</body>
+</html>
